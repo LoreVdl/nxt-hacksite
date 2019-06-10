@@ -1,3 +1,8 @@
+@font-face {
+    font-family: "futrfw"; 
+    src: url("/assets/lettertype/FUTRFW.TTF"); 
+}
+
 body {
     background-color: #000; 
     overflow: hidden;
@@ -44,4 +49,36 @@ body {
 
 img {
     z-index: 99;
+}
+
+.startPage {
+    text-align: center;
+
+    .logo {
+        width: 40%;
+        margin-top: 10%; 
+    }
+
+    .startButton {
+        margin-top: 5%; 
+        
+        img {
+            width: 50%; 
+        }
+    }
+}
+
+.hiddenText {
+    font-family: "futrfw";
+    text-align: center; 
+    height: 100vh;
+
+    .text {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+    }
 }

@@ -28,28 +28,37 @@ export class FindElementPageComponent implements OnInit {
   private sound3 = false; 
   private sound4 = false; 
   private sound5 = false; 
+  private img; 
 
   constructor(private elRef: ElementRef, private router: Router) { }
 
   ngOnInit() {
-    this.x = window.innerWidth - 200;
-    this.y = window.innerHeight - 50; 
-    this.positionX = Math.floor(Math.random() * this.x);
-    this.positionY = Math.floor(Math.random() * this.y);
-    this.positionXinPercent = (this.positionX / this.x) * 100;
-    this.positionYinPercent = (this.positionY / this.y * 100);
+    this.x = window.innerWidth;
+    this.y = window.innerHeight; 
+
+    do {
+      this.positionX = Math.floor(Math.random() * this.x);
+      this.positionXinPercent = (this.positionX / this.x) * 100;
+    }
+    while (this.positionXinPercent >= 85);
+
+    do {
+      this.positionY = Math.floor(Math.random() * this.y);
+      this.positionYinPercent = (this.positionY / this.y * 100);
+    }
+    while (this.positionYinPercent >= 85); 
 
     let div = document.getElementById("element"); 
-    let img = document.createElement("img");
+    this.img = document.createElement("img");
 
-    img.src = "assets/images/ESCAPE.png"; 
-    img.style.width = "10%";
-    img.style.position = "absolute";
-    img.style.cursor = "pointer";
-    img.style.left = this.positionXinPercent.toString() + "%"; 
-    img.style.top = this.positionYinPercent.toString() + "%"; 
-    img.addEventListener("click", this.navigate.bind(this));
-    div.appendChild(img);
+    this.img.src = "assets/images/ESCAPE.png"; 
+    this.img.style.width = "10%";
+    this.img.style.position = "absolute";
+    this.img.style.cursor = "pointer";
+    this.img.style.left = this.positionXinPercent.toString() + "%"; 
+    this.img.style.top = this.positionYinPercent.toString() + "%"; 
+    this.img.addEventListener("click", this.navigate.bind(this));
+    div.appendChild(this.img);
 
     let div1 = document.getElementById("div1"); 
     let positionXinPercentDiv1 = this.positionXinPercent - 5; 
@@ -183,6 +192,16 @@ export class FindElementPageComponent implements OnInit {
   }
 
   navigate() {
-    this.router.navigateByUrl('');
+    this.sound1 = false; 
+    this.sound2 = false; 
+    this.sound3 = false;
+    this.sound4 = false; 
+    this.sound5 = false; 
+
+    alert("012");
+
+    this.intervalVar = setTimeout(() => {
+      this.router.navigateByUrl('part-three');
+    }, 2000);
   }
 }
