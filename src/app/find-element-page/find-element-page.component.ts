@@ -36,6 +36,9 @@ export class FindElementPageComponent implements OnInit {
     this.x = window.innerWidth;
     this.y = window.innerHeight; 
 
+    let body = document.getElementsByTagName("body")[0]; 
+    body.style.overflow = "hidden"; 
+
     do {
       this.positionX = Math.floor(Math.random() * this.x);
       this.positionXinPercent = (this.positionX / this.x) * 100;
@@ -201,7 +204,7 @@ export class FindElementPageComponent implements OnInit {
     alert("012");
 
     this.intervalVar = setTimeout(() => {
-      this.router.navigateByUrl('part-three');
+      this.router.navigate(['/part-four']);
     }, 2000);
   }
 }

@@ -1,3 +1,20 @@
-<p>
-  scroll-page works!
-</p>
+<div class = "scrollText">
+  <h1>Goed Bezig!</h1>
+  <p>De volgende code is: 932</p>
+  <form [formGroup] = "form" (ngSubmit) = "verifyCode()">
+    <div class = "code1">
+      <input type = "tel" formControlName = "code1" maxlength="1">
+    </div>
+    
+    <div class = "code2">
+      <input type = "tel" formControlName = "code2" maxlength="1">
+    </div>
+
+    <div class = "code3">
+      <input type = "tel" formControlName = "code3" maxlength="1">
+    </div>
+    <div class = "submitButton">
+      <img src = "assets/images/key.png" (click) = "verifyCode()"/>
+    </div>
+  </form>
+</div>

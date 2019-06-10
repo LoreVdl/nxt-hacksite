@@ -3,11 +3,11 @@ import { FormGroup, FormBuilder, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'app-hidden-text-page',
-  templateUrl: './hidden-text-page.component.html',
-  styleUrls: ['./hidden-text-page.component.sass']
+  selector: 'app-encrypt-page',
+  templateUrl: './encrypt-page.component.html',
+  styleUrls: ['./encrypt-page.component.sass']
 })
-export class HiddenTextPageComponent implements OnInit {
+export class EncryptPageComponent implements OnInit {
   private form: FormGroup; 
   private code = "dog"; 
 
@@ -25,7 +25,7 @@ export class HiddenTextPageComponent implements OnInit {
 
   verifyCode() {
     if (this.form.value['code'].toLowerCase() === this.code) {
-      this.router.navigate(['/part-two']);
+      this.router.navigate(['/end']);
     }
   }
 

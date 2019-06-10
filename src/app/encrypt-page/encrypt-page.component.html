@@ -1,0 +1,11 @@
+<div class = "encryptPage">
+  <div class = "input">
+      <form [formGroup] = "form" (ngSubmit) = "verifyCode()">
+          <input type = "text" formControlName = "code">
+
+          <div class = "submitButton">
+            <img src = "assets/images/key.png" (click) = "verifyCode()"/>
+          </div>
+      </form>
+  </div>
+</div>

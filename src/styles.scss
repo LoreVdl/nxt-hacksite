@@ -5,7 +5,10 @@
 
 body {
     background-color: #000; 
-    overflow: hidden;
+}
+
+body::-webkit-scrollbar { 
+    display: none; 
 }
 
 #element {
@@ -80,5 +83,107 @@ img {
         left: 50%;
         -ms-transform: translate(-50%, -50%);
         transform: translate(-50%, -50%);
+
+        input {
+            background-color: black;
+            color: white; 
+            border: 2px solid black; 
+            width: 300px; 
+            height: 50px;
+            font-family: "futurw";
+            font-size: 40px; 
+            text-align: center;
+            margin-bottom: 50px; 
+        } 
+
+        img {
+            width: 40%; 
+        }
+
+        input:hover {
+            border: 2px solid white; 
+        }
+    }
+}
+
+.scrollText {
+    font-family: "futrfw";
+    text-align: center; 
+    height: 1000vh;
+
+    p {
+        color: white; 
+        margin-top: 0;
+        margin-bottom: 50px;
+        padding-top: 1000vh; 
+    }
+
+    h1 {
+        color: white; 
+        margin-top: 0;
+        margin-bottom: 0;
+        padding-top: 1000vh;
+        padding-bottom: 120px; 
+    }
+
+    form {
+        .code1, .code2, .code3 {
+            display: inline-block;
+
+            input {
+                background: #000; 
+                border-radius: 50%; 
+                width: 80px; 
+                min-height: 80px;
+                margin-bottom: 7.5px; 
+                margin-bottom: 7.5px; 
+                padding: 0;
+                border: 4px white solid; 
+                text-align: center;
+                vertical-align: middle;
+                color: white;
+                font-size: 50px;
+                margin-right: 20px; 
+                outline: none;
+            }
+
+        }
+
+        .submitButton {
+            margin-top: 50px; 
+
+            img {
+                width: 5%;
+            }
+        }
+    }
+}
+
+.encryptPage {
+    text-align: center;
+
+    .input {
+        margin: 0;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+
+        input {
+            background-color: black;
+            color: white; 
+            border: 2px solid white; 
+            width: 300px; 
+            height: 50px;
+            font-family: "futurw";
+            font-size: 40px; 
+            text-align: center;
+            margin-bottom: 50px; 
+        } 
+
+        img {
+            width: 40%; 
+        }
     }
 }

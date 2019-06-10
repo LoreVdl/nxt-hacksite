@@ -15,15 +15,11 @@ export class StartPageComponent implements OnInit {
     
   }
 
-  startTimer() {
-    this.router.navigate(['/part-one']);
-  }
-
   startAnimation() {
     let element = document.getElementsByTagName('img')[1]; 
     element.src = "../../assets/images/start.gif"; 
     this.intervalVar = setTimeout(function() {
-      this.startTimer(); 
+      this.router.navigate(['/part-one']);
     }.bind(this), 800);
   }
 
