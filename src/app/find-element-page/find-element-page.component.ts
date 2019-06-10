@@ -202,9 +202,6 @@ export class FindElementPageComponent implements OnInit {
     this.sound5 = false; 
 
     alert("012");
-
-    this.intervalVar = setTimeout(() => {
-      this.router.navigate(['/part-four']);
-    }, 2000);
+    this.router.navigate(['/part-four']);
   }
 }
