@@ -54,7 +54,7 @@ export class FindElementPageComponent implements OnInit {
     let div = document.getElementById("element"); 
     this.img = document.createElement("img");
 
-    this.img.src = "assets/images/ESCAPE.png"; 
+    this.img.src = "assets/images/logoBlack.png"; 
     this.img.style.width = "10%";
     this.img.style.position = "absolute";
     this.img.style.cursor = "pointer";
@@ -201,7 +201,11 @@ export class FindElementPageComponent implements OnInit {
     this.sound4 = false; 
     this.sound5 = false; 
 
-    alert("012");
-    this.router.navigate(['/part-four']);
+    this.img.src = "assets/images/ESCAPE.png"; 
+
+    this.intervalVar = setTimeout(() => {
+      alert("012");
+      this.router.navigate(['/part-four']);
+    }, 300);
   }
 }

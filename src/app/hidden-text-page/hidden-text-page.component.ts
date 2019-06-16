@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class HiddenTextPageComponent implements OnInit {
   private form: FormGroup; 
-  private code = "dog"; 
+  private code = "schildpad"; 
 
   constructor(private formBuilder: FormBuilder, public router: Router) { }
 

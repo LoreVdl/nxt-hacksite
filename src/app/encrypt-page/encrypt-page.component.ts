@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 })
 export class EncryptPageComponent implements OnInit {
   private form: FormGroup; 
-  private code = "dog"; 
+  private code = "be open to whatever comes nxt"; 
 
   constructor(private formBuilder: FormBuilder, public router: Router) { }
 

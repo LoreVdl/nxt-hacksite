@@ -9,9 +9,9 @@ import { Router } from '@angular/router';
 })
 export class ScrollPageComponent implements OnInit {
   private form: FormGroup; 
-  private code1 = 3; 
-  private code2 = 5; 
-  private code3 = 7; 
+  private code1 = 9; 
+  private code2 = 3; 
+  private code3 = 2; 
 
   constructor(private formBuilder: FormBuilder, public router: Router) { }
 
